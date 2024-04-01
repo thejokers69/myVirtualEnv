@@ -28,7 +28,7 @@ To get started with the project, follow these steps based on your operating syst
 
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-Happy coding!
+---
 
 
 # Using Models and Admin Site in Django
