@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+
+{% block nav %}
+    {% include 'program/prog_nav_bar.html' %}
+{% endblock nav %}
+
+{% block content %}
+    <!-- program_confirm_delete.html -->
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ program }}"?</p>
+        <button type="submit">Confirm Delete</button>
+    </form>    
+{% endblock content %}    

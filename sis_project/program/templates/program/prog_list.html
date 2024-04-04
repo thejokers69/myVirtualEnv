@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% block nav %}
+    {% include 'program/prog_nav_bar.html' %}
+{% endblock nav %}
+{% block content %}
+    <h1>List of all programs</h1>
+    <ul>
+    {% for program in program_list  %}
+        <li>
+            
+            <a href="{% url 'prog-detail' program.pk %}">{{program}}</a> <!-- Link to Display program Detail -->
+            <a href="{% url 'prog-edit' program.pk %}">Edit</a> <!-- Link to edit program -->
+            <a href="{% url 'prog-delete' program.pk %}">Delete</a> <!-- Link to delete program -->
+        </li>  
+    {%empty%} 
+        No program in the database
+    {% endfor %}
+    </ul>
+{% endblock content %}    

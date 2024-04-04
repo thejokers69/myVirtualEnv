@@ -1,0 +1,11 @@
+{% extends 'base/base.html' %}
+
+{% block nav %}
+    {% include 'program/prog_nav_bar.html' %}
+{% endblock nav %}
+
+{% block content %}
+    <h2>{{ program.prog_name }}</h2>
+    <p>{{ program.prog_description }}</p>
+    <p>{{ program.registration_fees }}</p>
+{% endblock content %}    

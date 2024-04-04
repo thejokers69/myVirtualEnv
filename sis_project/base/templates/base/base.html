@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'base/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'base/css/styles.css' %}" rel="stylesheet" crossorigin="anonymous">
+</head>
+<title>Document</title>
+</head>
+<body>
+    <header id="pageHeader">
+        {% block header %}
+            <a href="{% url 'base-home' %}">Home</a>
+            <a href="{% url 'program-home' %}">Programs</a>
+            <a href="{% url 'student-home' %}">Students</a>       
+        {% endblock header %}
+        
+    </header>
+    <nav id="mainNav">
+        {% block nav %}
+            Nav
+        {% endblock nav %}
+    </nav>
+    <article id="mainArticle">
+        {% block content %}
+        Main Content
+        {% endblock content %}
+    </article>
+    <div id="siteAds">
+        {% block ads %}
+            Ads
+        {% endblock ads %}
+    </div>
+    <footer id="pageFooter">
+        {% block footer %}
+            Footer
+        {% endblock footer %}
+    </footer>
+
+    <script src="{% static 'base/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+
+
