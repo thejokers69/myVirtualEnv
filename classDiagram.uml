@@ -1,0 +1,24 @@
+classDiagram
+  class Utilisateur {
+    + ID: int
+    + nom: String
+    + prenom: String
+    + adresseEmail: String
+    + numeroTelephone: String
+  }
+
+  class Trajet {
+    + ID: int
+    + date: Date
+    + heure: Time
+    + pointDepart: String
+    + pointArrivee: String
+    + placesDisponibles: int
+    + cout: float
+    + conducteur: Utilisateur
+    + passagers: Utilisateur[]
+  }
+
+  Utilisateur --* Trajet: proposer
+  Trajet --* Utilisateur: passagers
+  Utilisateur --* Trajet: reserver
