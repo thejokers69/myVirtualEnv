@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/django" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/peewee" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/secure-web-applicatio" vcs="Git" />
   </component>
 </project>
