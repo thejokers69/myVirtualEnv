@@ -1,11 +1,17 @@
+<!-- templates/carpool/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>College Carpool</title>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Welcome to College Carpool</h1>
-    <a href="{% url 'login' %}">Login</a>
-    <a href="{% url 'register' %}">Register</a>
+    <h1>Available Rides</h1>
+    <ul>
+        {% for ride in rides %}
+        <li>{{ ride.departure }} to {{ ride.destination }} at {{ ride.departure_time }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
