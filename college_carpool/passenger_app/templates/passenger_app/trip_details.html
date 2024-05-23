@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip Detail</title>
+</head>
+<body>
+    <h1>Trip Detail</h1>
+    <p>{{ trip.start_location }} to {{ trip.end_location }}</p>
+    <p>Departure: {{ trip.departure_time }}</p>
+    <p>Driver: {{ trip.driver.username }}</p>
+    <p>Passengers:
+        <ul>
+            {% for passenger in trip.passengers.all %}
+                <li>{{ passenger.username }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <a href="{% url 'rate_driver' trip.id %}">Rate Driver</a>
+</body>
+</html>

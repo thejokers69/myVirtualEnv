@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Reports</title>
+</head>
+<body>
+    <h1>Generate Reports</h1>
+    <ul>
+        {% for report in reports %}
+            <li>{{ report.report_date }}: {{ report.total_trips }} trips, {{ report.total_users }} users</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

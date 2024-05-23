@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Carpool</title>
+</head>
+<body>
+    <h1>Create a Carpool Offer</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="start_location" placeholder="Start Location" required>
+        <input type="text" name="end_location" placeholder="End Location" required>
+        <input type="number" name="available_seats" placeholder="Available Seats" required>
+        <input type="datetime-local" name="date" required>
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

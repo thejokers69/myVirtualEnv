@@ -1,0 +1,16 @@
+{% extends 'admin_module/base.html' %}
+{% block content %}
+<h2>Carpool Detail</h2>
+<p>Driver: {{ carpool.driver.username }}</p>
+<p>Passengers:</p>
+<ul>
+    {% for passenger in carpool.passengers.all %}
+        <li>{{ passenger.username }}</li>
+    {% endfor %}
+</ul>
+<p>Start Time: {{ carpool.start_time }}</p>
+<p>End Time: {{ carpool.end_time }}</p>
+<p>Start Location: {{ carpool.start_location }}</p>
+<p>End Location: {{ carpool.end_location }}</p>
+<p>Approved: {{ carpool.approved }}</p>
+{% endblock %}
