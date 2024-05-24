@@ -1,9 +1,0 @@
-{% extends 'admin_module/base.html' %}
-{% block content %}
-<h2>Carpool List</h2>
-<ul>
-    {% for carpool in carpools %}
-        <li>Carpool ID: {{ carpool.id }} - Driver: {{ carpool.driver.username }} - <a href="{% url 'carpool_detail' carpool.pk %}">Details</a></li>
-    {% endfor %}
-</ul>
-{% endblock %}
